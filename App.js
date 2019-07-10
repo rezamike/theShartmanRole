@@ -1,19 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Calculator from './components/Calculator.js';
+import { Container, Header, Content, H1, H2, H3, Text, Left, Button, Icon, Body, Title, Right } from 'native-base';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <Container>
+      <Header>
+        <Body>
+          <Title>The Shartman Role</Title>
+        </Body>
+      </Header>
       <Calculator />
-    </View>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
