@@ -4,9 +4,6 @@
     "slug": "theShartmanRoll",
     "privacy": "public",
     "sdkVersion": "33.0.0",
-    "ios": {
-      "bundleIdentifier": "https://github.com/rezamike/theShartmanRole"
-    },
     "platforms": [
       "ios",
       "android",
@@ -27,7 +24,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rezamike.theShartmanRole"
     }
   }
 }

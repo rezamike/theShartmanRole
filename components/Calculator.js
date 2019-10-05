@@ -5,13 +5,12 @@ class Calculator extends Component {
     state = {
         dieCount1: '1',
         dieCount2: '',
-        dieCount3: '',
         rollResult: 0,
         transparent: true
     }
 
     rollEm = () => {
-        var diceType = Number(this.state.dieCount2 + this.state.dieCount3);
+        var diceType = Number(this.state.dieCount2);
         var count = Number(this.state.dieCount1);
         var tempArr = [];
         var temp;
@@ -123,51 +122,26 @@ class Calculator extends Component {
                             selectedValue={this.state.dieCount2}
                             style={{
                                 height: '100%',
-                                width: '25%'
+                                width: '50%'
                             }}
                             onValueChange={(itemValue, itemIndex) =>
                                 this.setState({ dieCount2: itemValue })
                             }
                         >
-                            <Picker.Item label="-" value="0" />
-                            <Picker.Item label="1" value="1" />
-                            <Picker.Item label="2" value="2" />
-                            <Picker.Item label="3" value="3" />
+                            <Picker.Item label="--" value="-" />
                             <Picker.Item label="4" value="4" />
-                            <Picker.Item label="5" value="5" />
                             <Picker.Item label="6" value="6" />
-                            <Picker.Item label="7" value="7" />
                             <Picker.Item label="8" value="8" />
-                            <Picker.Item label="9" value="9" />
-                        </Picker>
-                        <Picker
-                            selectedValue={this.state.dieCount3}
-                            style={{
-                                height: '100%',
-                                width: '25%'
-                            }}
-                            onValueChange={(itemValue, itemIndex) =>
-                                this.setState({ dieCount3: itemValue })
-                            }
-                        >
-                            <Picker.Item label="-" />
-                            <Picker.Item label="0" value="0" />
-                            <Picker.Item label="1" value="1" />
-                            <Picker.Item label="2" value="2" />
-                            <Picker.Item label="3" value="3" />
-                            <Picker.Item label="4" value="4" />
-                            <Picker.Item label="5" value="5" />
-                            <Picker.Item label="6" value="6" />
-                            <Picker.Item label="7" value="7" />
-                            <Picker.Item label="8" value="8" />
-                            <Picker.Item label="9" value="9" />
+                            <Picker.Item label="10" value="10" />
+                            <Picker.Item label="12" value="12" />
+                            <Picker.Item label="20" value="20" />
                         </Picker>
                     </View>
                 </View>
                 <View style={{ justifyContent: 'flex-start', alignItems: 'center', width: '100%', height: '30%' }}>
                     <View style={{ marginBottom: 50 }}>
                         <Text style={{ fontSize: 32, fontStyle: 'italic', fontWeight: 'bold' }}>
-                            {this.state.dieCount1}<Text style={{ color: 'red' }}>d</Text>{this.state.dieCount2}{this.state.dieCount3}
+                            {this.state.dieCount1}<Text style={{ color: 'red' }}>d</Text>{this.state.dieCount2}
                         </Text>
                     </View>
                     <View>
